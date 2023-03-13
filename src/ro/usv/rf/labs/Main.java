@@ -4,7 +4,7 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 
 import static ro.usv.rf.utils.DataUtils.printMatrix;
-import static ro.usv.rf.utils.FileUtils1.*;
+import static ro.usv.rf.utils.FileUtils.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -22,10 +22,10 @@ public class Main {
 
 
         //3
-        double[][] X = readMatrixFromFileStream("in.txt");
+        double[][] X = readLearningSetFromFile("in.txt");
         printMatrix(X);
 
-        writePatternSetToFile("out.txt", X, ", ");
+        writeLearningSetToFile("out.txt", X);
 
 
     }
