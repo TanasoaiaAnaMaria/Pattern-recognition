@@ -1,8 +1,7 @@
 package ro.usv.rf.utils;
 
-import ro.usv.rf.Pattern;
+import ro.usv.rf.entity.Pattern;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 

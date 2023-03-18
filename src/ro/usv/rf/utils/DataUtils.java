@@ -6,7 +6,7 @@ public class DataUtils {
             for(double[] lin: x){
 
                 for(double xcrt: lin)
-                    System.out.print(xcrt+"\t");
+                    System.out.print(String.format("%.2f", xcrt)+"\t");
                 System.out.println();
             }
         }
