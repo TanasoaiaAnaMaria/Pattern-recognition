@@ -40,23 +40,23 @@ public class Main {
         writeLearningSetToFile("out.txt", X);
 
         ///d)
-//        DistanceMatrix mDist = new DistanceMatrix(X);
-//        System.out.println(mDist);
-//
-//        ///e)
-//        double[][] vecini = DistanceMatrix.neighbors(0);
-//        printMatrix(vecini);
-
-        //tema ex 1
-//        System.out.println();
-//        DistanceMatrix mDistAlegere = new DistanceMatrix(X,"chebyshev");
-//        System.out.println(mDist);
-//
-        //tema ex 2
         DistanceMatrix mDist = new DistanceMatrix(X);
         System.out.println(mDist);
 
-        System.out.printf("Value is: %,.2f", DistanceMatrix.d(1,2));
+        ///e)
+        double[][] vecini = DistanceMatrix.neighbors(0);
+        printMatrix(vecini);
+
+        //tema ex 1
+        System.out.println();
+        DistanceMatrix mDistAlegere = new DistanceMatrix(X,"chebyshev");
+        System.out.println(mDist);
+
+        //tema ex 2
+//        DistanceMatrix mDist = new DistanceMatrix(X);
+//        System.out.println(mDist);
+//
+//        System.out.printf("Value is: %,.2f", DistanceMatrix.d(1,2));
 
     }
 }

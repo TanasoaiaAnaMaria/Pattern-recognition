@@ -9,39 +9,39 @@ public class DistanceMatrix {
     private static double[][] matDist;
     private double[][] matDist1;
 
-//    public DistanceMatrix(double[][] x) {
-//        int n = x.length;
-//        int p = x[0].length;
-//        matDist = new double[n][n];
-//        for (int i = 0; i < n; i++) {
-//            for (int j = i+1; j < n; j++)
-//                {
-//                    matDist[i][j] = matDist[j][i] = distEuclid(x[i], x[j]);
-//                }
-//
-//        }
-//    }
-
     public DistanceMatrix(double[][] x) {
         int n = x.length;
-        matDist = new double[n][];
+        int p = x[0].length;
+        matDist = new double[n][n];
         for (int i = 0; i < n; i++) {
-            matDist[i] = new double[i+1];
-            for (int j = 0; j <= i; j++) {
-                matDist[i][j] = distEuclid(x[i], x[j]);
-            }
+            for (int j = i+1; j < n; j++)
+                {
+                    matDist[i][j] = matDist[j][i] = distEuclid(x[i], x[j]);
+                }
+
         }
     }
 
-    public static double d(int i, int j) {
-        if (i == j) {
-            return 0;
-        } else if (i < j) {
-            return matDist[j][i];
-        } else {
-            return matDist[i][j];
-        }
-    }
+//    public DistanceMatrix(double[][] x) {
+//        int n = x.length;
+//        matDist = new double[n][];
+//        for (int i = 0; i < n; i++) {
+//            matDist[i] = new double[i+1];
+//            for (int j = 0; j <= i; j++) {
+//                matDist[i][j] = distEuclid(x[i], x[j]);
+//            }
+//        }
+//    }
+//
+//    public static double d(int i, int j) {
+//        if (i == j) {
+//            return 0;
+//        } else if (i < j) {
+//            return matDist[j][i];
+//        } else {
+//            return matDist[i][j];
+//        }
+//    }
 
     public DistanceMatrix(double[][] x, String metric) {
         int n = x.length;
